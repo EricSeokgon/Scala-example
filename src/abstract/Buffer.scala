@@ -1,8 +1,5 @@
-package abstract
 
-package
-
-abstract /**
+/**
   * Project: Scala-example
   * FileName: Buffer
   * Date: 2016-01-23
