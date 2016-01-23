@@ -10,6 +10,6 @@
   */
 trait Buffer {
   type T
-  val elementL: T
+  val element: T
 
 }
