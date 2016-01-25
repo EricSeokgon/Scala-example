@@ -7,18 +7,22 @@
   * Note: 
   * To change this template use File | Settings | File Templates.
   */
-abstract class IntSeqBuffer extends SeqBuffer {
-  type U = Int;
+
+abstract class Buffer[+T] {
+  val element: T
 }
 
-object AbstractTypeTest1 extends App {
-  def newIntSeqBuf(elem1: Int, elem2: Int, elem3: Int): IntSeqBuffer =
-    new IntSeqBuffer {
-      type T = List[U]
-      val element: T = List(elem1, elem2, elem3)
+abstract class SeqBuffer[U, +T <: Seq[U]] extends Buffer[T] {
+  def length = element.length
+}
+
+object AbstractTypeTest2 extends App {
+  def newIntSeqBuf(e1: Int, e2: Int): SeqBuffer[Int, Seq[Int]] =
+    new SeqBuffer[Int, List[Int]] {
+      val element = List(e1, e2)
     }
 
-  val buf = newIntSeqBuf(7, 8, 9)
-  println("lenght = " + buf.length)
+  val buf = newIntSeqBuf(7, 8)
+  println("length = " + buf.length)
   println("content = " + buf.element)
 }
