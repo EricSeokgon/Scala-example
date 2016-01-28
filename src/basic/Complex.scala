@@ -14,4 +14,6 @@ class Complex(real: Double, imaginary: Double) {
 
   def im() = imaginary
 
+  override def toString() =
+    "" + re + (if (im < 0) "" else "+") + im + "i"
 }
