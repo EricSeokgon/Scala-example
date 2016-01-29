@@ -9,8 +9,12 @@ package basic
   * Note: 
   * To change this template use File | Settings | File Templates.
   */
-class Date(y: Int, m: Int, d: Int) extends Ord {
+abstract class Date(y: Int, m: Int, d: Int) extends Ord {
   def year = y
+
   def month = m
+
   def day = d
+
   override def toString(): String = year + "-" + month + "-" + day
+}
