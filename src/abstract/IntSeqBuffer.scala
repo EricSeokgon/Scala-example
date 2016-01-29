@@ -12,7 +12,7 @@ abstract class IntSeqBuffer extends SeqBuffer {
   type U = Int
 }
 
-object AbstractTypeTest1 extends App {
+object AbstractTypeTest1 {
   def newIntSeqBuf(elem1: Int, elem2: Int): IntSeqBuffer =
     new IntSeqBuffer {
       type T = List[U]
