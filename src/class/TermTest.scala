@@ -24,10 +24,12 @@ object TermTest extends scala.App {
         print(")")
     }
   }
+
   def isIdentityFun(term: Term): Boolean = term match {
     case Fun(x, Var(y)) if x == y => true
     case _ => false
   }
+
   val id = Fun("x", Var("x"))
   val t = Fun("x", Fun("y", App(Var("x"), Var("y"))))
   printTerm(t)
