@@ -1,6 +1,4 @@
-package class
 
-package class
 
 /**
   * Project: Scala-example
