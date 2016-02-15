@@ -15,4 +15,5 @@ class Point(xc: Int, yc: Int) extends Similarity {
   def isSimilar(obj: Any) =
     obj.isInstanceOf[Point] &&
       obj.asInstanceOf[Point].x == x
+
 }
