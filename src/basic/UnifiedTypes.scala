@@ -19,5 +19,6 @@ object UnifiedTypes extends App {
   val iter: Iterator[Any] = set.iterator
   while (iter.hasNext) {
     println(iter.next.toString())
+
   }
 }
